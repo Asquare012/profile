@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(#03080c, #1a2129);
+}
+
+#container #info {
+    font-family: 'Josefin Sans', sans-serif;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+#container #info #name {
+    color: #0ee460e3;
+    text-shadow: 3px 3px 6px #2b2a2a;
+    font-size: 35px;
+    margin-bottom: 5px;
+    font-weight: 800
+}
+
+#container #info #slack {
+    color: #06d355e3;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px #222222;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+#container #info #day {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-shadow: 3px 3px 3px #222222;
+}
+
+#container #info #date {
+    color: #f08585;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #222222;
+    margin-bottom: 30px;
+}
+
+#container #info #git {
+    border: 1px solid rgb(150, 143, 143);
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #e6dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 1px 1px 1px rgb(53, 52, 52);
+}
+
+#container #info #git img {
+    margin-right: 5px;
+    background-color: #af5252;
+}
+
+/* pics */
+#container #pics {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container #pics img {
+    border: 1px solid #333232;
+    box-shadow: 2px 2px 2px #834848;
+}
+
+@media screen and (max-width:600px) {
+    #container {
+        width: 100%;
+    }
+}
