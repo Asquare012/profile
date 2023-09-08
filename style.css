@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #03080c;
 }
 
 #container {
@@ -60,16 +65,21 @@ body {
 
 #container #info #git {
     border: 1px solid rgb(150, 143, 143);
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 120px;
     border-radius: 10px;
     cursor: pointer;
-    color: #e6dddd;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     box-shadow: 1px 1px 1px rgb(53, 52, 52);
+}
+
+#container #info #git a {
+    text-decoration: none;
+    color: #e6dddd;
+
 }
 
 #container #info #git img {
