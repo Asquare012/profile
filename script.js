@@ -10,8 +10,12 @@ const dayList = [
   "Friday",
   "Saturday",
 ];
+
 const d = dayList[date.getDay()];
-res.innerHTML = d;
+setInterval(() => {
+  const t = new Date().toLocaleTimeString();
+  res.innerHTML = `${d}: ${t}`;
+}, 1000);
 
 // current date
 const show = document.querySelector("#date");
