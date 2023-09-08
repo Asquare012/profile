@@ -64,16 +64,18 @@ body {
 }
 
 #container #info #git {
-    border: 1px solid rgb(150, 143, 143);
+    border: 1px solid #796e6e;
     height: 40px;
     width: 120px;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    box-shadow: 1px 1px 1px rgb(53, 52, 52);
+    box-shadow: 1px 1px 1px #353434;
+    background-color: #034b1fe3;
+
 }
 
 #container #info #git a {
@@ -84,7 +86,6 @@ body {
 
 #container #info #git img {
     margin-right: 5px;
-    background-color: #af5252;
 }
 
 /* pics */
