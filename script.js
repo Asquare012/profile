@@ -17,6 +17,6 @@ res.innerHTML = d;
 const show = document.querySelector("#date");
 
 setInterval(() => {
-  const now = new Date().toLocaleTimeString();
+  const now = Date.now();
   show.innerHTML = now;
 }, 1000);
