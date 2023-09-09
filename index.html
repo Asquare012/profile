@@ -27,32 +27,16 @@ const weekdays = [
   "Friday",
   "Saturday",
 ];
-const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
 
 const dateClock = setInterval(function dateTime() {
   const today = new Date();
   let date = today.getDate();
   let day = weekdays[today.getDay()];
-  let month = monthNames[today.getMonth()];
-
-  dateContainer.innerHTML = `<p>Current Day Of TheWeek:</p><p>${day}</p><p><p>${date}</p><p>${month}</p>`;
+  dateContainer.innerHTML = `<p>Current Day Of TheWeek:</p><p>${day}</p>`;
 }, 1000);
 
         setInterval(()=>{
-            const time = document.querySelector(".time");
+        const time = document.querySelector(".time");
         let date = new Date();
         let hours = date.getHours()
         let minutes = date.getMinutes()
