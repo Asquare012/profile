@@ -2,9 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 data-testid="slackUserName">HASSAN ABASS</h1>
+    <img data-testid="slackDisplayImage" src="img/image.jpeg" alt="hassan abass"  >
+    <div data-testid="currentDayOfTheWeek" class="date"></div>
+    <div data-testid="currentUTCTime" class="time"></div>
+    <div data-testid="myTrack" class="track">My track: <b> Frontend </b></div>
+    <a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">githubURL</a>
+    
+
+    <script>
+        let dateContainer = document.querySelector(".date");
+const weekdays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const dateClock = setInterval(function dateTime() {
+  const today = new Date();
+  let date = today.getDate();
+  let day = weekdays[today.getDay()];
+  let month = monthNames[today.getMonth()];
+
+  dateContainer.innerHTML = `<p>Current Day Of TheWeek:</p><p>${day}</p><p><p>${date}</p><p>${month}</p>`;
+}, 1000);
+
+        setInterval(()=>{
+            const time = document.querySelector(".time");
+        let date = new Date();
+        let hours = date.getHours()
+        let minutes = date.getMinutes()
+        let seconds = date.getSeconds()
+        let milliseconds = date.getMilliseconds();
+        let day_night = 'AM';
+        if (hours > 12){
+            day_night = 'PM'
+            hours = hours - 12;
+        }
+        if (minutes < 10){
+            minutes = '0' + minutes;
+        }
+        if (hours < 10){
+            hours = '0' + hours;
+        }
+        if (seconds < 10){
+            seconds = '0' + seconds;
+        }
+        if (milliseconds < 10){
+            seconds = '0' + milliseconds;
+        }
+       
+        time.textContent = 'Current UTC Time:' + hours + ':' + minutes + ':' + seconds +':'+ milliseconds + ' ' + day_night;
+        })
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <!-- google font -->
+     google font 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
@@ -26,4 +110,4 @@
     </div>
   <script src="script.js"></script>  
 </body>
-</html>
+</html> -->
