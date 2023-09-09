@@ -30,9 +30,8 @@ const weekdays = [
 
 const dateClock = setInterval(function dateTime() {
   const today = new Date();
-  let date = today.getDate();
   let day = weekdays[today.getDay()];
-  dateContainer.innerHTML = `<p>Current Day Of TheWeek:</p><p>${day}</p>`;
+  dateContainer.innerHTML = `<p>Current Day Of TheWeek: ${day}</p>`;
 }, 1000);
 
         setInterval(()=>{
@@ -41,7 +40,6 @@ const dateClock = setInterval(function dateTime() {
         let hours = date.getHours()
         let minutes = date.getMinutes()
         let seconds = date.getSeconds()
-        let milliseconds = date.getMilliseconds();
         let day_night = 'AM';
         if (hours > 12){
             day_night = 'PM'
@@ -56,42 +54,10 @@ const dateClock = setInterval(function dateTime() {
         if (seconds < 10){
             seconds = '0' + seconds;
         }
-        if (milliseconds < 10){
-            seconds = '0' + milliseconds;
-        }
        
-        time.textContent = 'Current UTC Time:' + hours + ':' + minutes + ':' + seconds +':'+ milliseconds + ' ' + day_night;
+        time.textContent = 'Current UTC Time:' + hours + ':' + minutes + ':' + seconds +':' + ' ' + day_night;
         })
     </script>
 </body>
 </html>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-     google font 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="container">
-        <div id="info">
-        <div id="name" data-testid="slackUserName">HASSAN ABASS</div>
-        <div id="slack" data-testid="myTrack">Frontend</div>
-        <div id="day" data-testid="currentDayOfTheWeek"></div>
-        <div id="date" data-testid="currentUTCTime"></div>
-        <div id="git"><a href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL"><img src="git.png" alt="github" height="20px">GITHUB </a></div>
-         
-        </div>
-        <div id="pics">
-     <img src="pics.png" alt="hassan abass" height="100%"  data-testid="slackDisplayImage">
-        </div>
-    </div>
-  <script src="script.js"></script>  
-</body>
-</html> -->
