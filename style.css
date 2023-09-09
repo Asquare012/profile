@@ -8,7 +8,7 @@ html {
     height: 100vh;
 }
 
-body {
+/* body {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -88,7 +88,7 @@ body {
     margin-right: 5px;
 }
 
-/* pics */
+
 #container #pics {
     height: 50%;
     display: flex;
@@ -100,8 +100,8 @@ body {
     border: 1px solid #333232;
     box-shadow: 2px 2px 2px #834848;
 }
-
-@media screen and (max-width:600px) {
+ */
+ @media screen and (max-width:600px) {
     #container {
         width: 100%;
     }
