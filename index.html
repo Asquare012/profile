@@ -45,7 +45,7 @@ const dateClock = setInterval(function dateTime() {
             day_night = 'PM'
         }
      
-        time.textContent = `Current UTC Time: ${hours} : ${minutes} : ${seconds} : ${day_night} || UTC Time(ms): ${Date.now()}`;
+        time.textContent = `Current UTC Time: ${hours} : ${minutes} : ${seconds} ${day_night} || UTC Time(ms): ${Date.now()}`;
         })
     </script>
 </body>
