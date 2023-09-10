@@ -5,16 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
-    <link rel="stylesheet" href="style.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+#container {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(#03080c, #1a2129);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#container img{
+    border-radius: 20%;
+}
+@media screen and (max-width:600px) {
+    #container {
+        width: 100%;
+    }
+}
+</style>
 </head>
 <body>
+    <div id="container">
     <h1 data-testid="slackUserName">HASSAN ABASS</h1>
-    <img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass"  >
+    <img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass" height="100px" width="100px"  >
     <div data-testid="currentDayOfTheWeek" class="date"></div>
     <div data-testid="currentUTCTime" class="time"></div>
     <div data-testid="myTrack" class="track">My track: <b> Frontend </b></div>
     <a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">githubURL</a>
-    
+    </div>
 
     <script>
         let dateContainer = document.querySelector(".date");
@@ -31,7 +60,7 @@ const weekdays = [
 const dateClock = setInterval(function dateTime() {
   const today = new Date();
   let day = weekdays[today.getDay()];
-  dateContainer.innerHTML = `Current Day Of TheWeek: ${day}`;
+  dateContainer.innerHTML = `Current Day Of The Week: ${day}`;
 }, 1000);
 
         setInterval(()=>{
