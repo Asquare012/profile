@@ -56,10 +56,9 @@ h1{
     <div id="container">
     <h1 data-testid="slackUserName">HASSAN ABASS</h1>
     <img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass" height="200px" width="200px"  >
-    <div data-testid="currentDayOfTheWeek" class="date"></div>
     <div data-testid="currentUTCTime" class="time"></div>
     <div data-testid="myTrack" class="track">Frontend</div>
-  <a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">githubURL</a>
+  <a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">github URL</a>
     </div>
 
     <script>
@@ -80,19 +79,6 @@ const dateClock = setInterval(function dateTime() {
   dateContainer.innerHTML = ` ${day}`;
 }, 1000);
 
-        setInterval(()=>{
-        const time = document.querySelector(".time");
-        let date = new Date();
-        let hours = date.getHours()
-        let minutes = date.getMinutes()
-        let seconds = date.getSeconds()
-        let day_night = 'AM';
-        if (hours > 12){
-            day_night = 'PM'
-        }
-     
-        time.innerHTML = `${hours}:${minutes}:${seconds} ${day_night} <br/>${Date.now()}`;
-        })
     </script>
 </body>
 </html>
