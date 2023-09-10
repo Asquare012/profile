@@ -44,10 +44,6 @@ h1{
     margin-bottom: 20px;
 }
 
-a{
-    color: red;
-}
-
 
 @media screen and (max-width:600px) {
     #container {
@@ -60,9 +56,10 @@ a{
     <div id="container">
     <h1 data-testid="slackUserName">HASSAN ABASS</h1>
     <img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass" height="200px" width="200px"  >
+    <div data-testid="currentDayOfTheWeek" class="date"></div>
     <div data-testid="currentUTCTime" class="time"></div>
     <div data-testid="myTrack" class="track">Frontend</div>
-  <a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">github URL</a>
+  <a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">githubURL</a>
     </div>
 
     <script>
@@ -83,6 +80,10 @@ const dateClock = setInterval(function dateTime() {
   dateContainer.innerHTML = ` ${day}`;
 }, 1000);
 
+        setInterval(()=>{
+        const time = document.querySelector(".time"); 
+        time.innerHTML = `${Date.now()}`;
+        })
     </script>
 </body>
 </html>
