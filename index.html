@@ -41,7 +41,7 @@ h1{
     margin-bottom: 10px;
 }
 .date, .time, .track{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -58,8 +58,8 @@ h1{
     <img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass" height="200px" width="200px"  >
     <div data-testid="currentDayOfTheWeek" class="date"></div>
     <div data-testid="currentUTCTime" class="time"></div>
-    <div data-testid="myTrack" class="track">My track: <b> Frontend </b></div>
-    <div>github link: <a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">githubURL</a></div>
+    <div data-testid="myTrack" class="track">Frontend</div>
+  <a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">githubURL</a>
     </div>
 
     <script>
@@ -77,7 +77,7 @@ const weekdays = [
 const dateClock = setInterval(function dateTime() {
   const today = new Date();
   let day = weekdays[today.getDay()];
-  dateContainer.innerHTML = `Current Day Of The Week: ${day}`;
+  dateContainer.innerHTML = ` ${day}`;
 }, 1000);
 
         setInterval(()=>{
@@ -91,7 +91,7 @@ const dateClock = setInterval(function dateTime() {
             day_night = 'PM'
         }
      
-        time.innerHTML = `Current UTC Time: ${hours}:${minutes}:${seconds} ${day_night} <br/> UTC Time(ms): ${Date.now()}`;
+        time.innerHTML = `${hours}:${minutes}:${seconds} ${day_night} <br/>${Date.now()}`;
         })
     </script>
 </body>
