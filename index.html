@@ -91,7 +91,7 @@ const dateClock = setInterval(function dateTime() {
             day_night = 'PM'
         }
      
-        time.textContent = `Current UTC Time: ${hours}:${minutes}:${seconds} ${day_night} <br/> UTC Time(ms): ${Date.now()}`;
+        time.innerHTML = `Current UTC Time: ${hours}:${minutes}:${seconds} ${day_night} <br/> UTC Time(ms): ${Date.now()}`;
         })
     </script>
 </body>
