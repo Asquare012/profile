@@ -29,10 +29,22 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: #ffffff;
+    font-size: 17px;
 }
 #container img{
     border-radius: 20%;
+    margin-bottom: 30px;
 }
+h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.date, .time, .track{
+    margin-bottom: 10px;
+}
+
+
 @media screen and (max-width:600px) {
     #container {
         width: 100%;
@@ -43,7 +55,7 @@ body{
 <body>
     <div id="container">
     <h1 data-testid="slackUserName">HASSAN ABASS</h1>
-    <img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass" height="150px" width="150px"  >
+    <img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass" height="200px" width="200px"  >
     <div data-testid="currentDayOfTheWeek" class="date"></div>
     <div data-testid="currentUTCTime" class="time"></div>
     <div data-testid="myTrack" class="track">My track: <b> Frontend </b></div>
@@ -79,7 +91,7 @@ const dateClock = setInterval(function dateTime() {
             day_night = 'PM'
         }
      
-        time.textContent = `Current UTC Time: ${hours} : ${minutes} : ${seconds} ${day_night} || UTC Time(ms): ${Date.now()}`;
+        time.textContent = `Current UTC Time: ${hours}:${minutes}:${seconds} ${day_night} <br/> UTC Time(ms): ${Date.now()}`;
         })
     </script>
 </body>
