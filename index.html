@@ -17,12 +17,6 @@ html {
 }
 body{
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#container {
-    height: 100%;
     width: 50%;
     background: linear-gradient(#03080c, #1a2129);
     display: flex;
@@ -32,15 +26,16 @@ body{
     color: #ffffff;
     font-size: 17px;
 }
+
 img{
     border-radius: 20%;
     margin-bottom: 30px;
 }
-h1{
+.header{
     font-size: 30px;
     margin-bottom: 10px;
 }
-.date, .time, .track{
+p{
     margin-bottom: 20px;
 }
 a{
@@ -48,21 +43,20 @@ a{
 }
 
 @media screen and (max-width:600px) {
-    #container {
+    body {
         width: 100%;
     }
 }
 </style>
 </head>
 <body>
-    <div id="container">
-    <p><h1 data-testid="slackUserName">HASSAN ABASS <br/><img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass" height="200px" width="200px"></h1></p>
-    
+    <p data-testid="slackUserName" class="header">HASSAN ABASS</p>
+    <p><img data-testid="slackDisplayImage" src="dp.jpg" alt="hassan abass" height="200px" width="200px"></p>
     <p data-testid="currentDayOfTheWeek" class="date"></p>
     <p data-testid="currentUTCTime" class="time"></p>
     <p data-testid="myTrack" class="track">Frontend</p>
   <p><a data-testid=“githubURL” href="https://github.com/Asquare012/profile" target="_blank" data-testid="githubURL">githubURL</a></p>
-    </div>
+
 
     <script>
         let dateContainer = document.querySelector(".date");
